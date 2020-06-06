@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="BYZ-38-t0r" customClass="SplashViewController" customModule="Covid19_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID- 19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqx-Xn-pMt">
+                                <rect key="frame" x="140.5" y="170.5" width="133.5" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLf-zw-lQ3">
+                                <rect key="frame" x="168" y="652.5" width="78" height="27"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coronavirus-cdc-1585869759" translatesAutoresizingMaskIntoConstraints="NO" id="WGy-Pd-aST">
+                                <rect key="frame" x="72.5" y="263.5" width="269" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WGy-Pd-aST" secondAttribute="height" multiplier="1:1" id="DYt-CA-5X8"/>
+                                    <constraint firstAttribute="width" constant="269" id="Dav-k1-FUs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WGy-Pd-aST" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="HUn-FR-rKt"/>
+                            <constraint firstItem="hqx-Xn-pMt" firstAttribute="centerX" secondItem="WGy-Pd-aST" secondAttribute="centerX" id="JNl-Vc-QOS"/>
+                            <constraint firstItem="WGy-Pd-aST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QyO-KD-FOg"/>
+                            <constraint firstItem="GLf-zw-lQ3" firstAttribute="top" secondItem="WGy-Pd-aST" secondAttribute="bottom" constant="120" id="VXz-4m-rsz"/>
+                            <constraint firstItem="WGy-Pd-aST" firstAttribute="top" secondItem="hqx-Xn-pMt" secondAttribute="bottom" constant="63.5" id="qoZ-Mm-T5K"/>
+                            <constraint firstItem="GLf-zw-lQ3" firstAttribute="centerX" secondItem="WGy-Pd-aST" secondAttribute="centerX" id="rDT-E4-H4R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="coronaImage" destination="WGy-Pd-aST" id="D6K-XE-3W7"/>
+                        <outlet property="loadingLabel" destination="GLf-zw-lQ3" id="Ku6-Tg-KSD"/>
+                        <outlet property="titleLabel" destination="hqx-Xn-pMt" id="pYk-gh-5P5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="-80"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="1eK-2S-Fko">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="pap-7i-YvV" customClass="HomeViewController" customModule="Covid19_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MBE-4h-Mu2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NDj-lf-8Gt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="EIQ-Jw-BDU"/>
+                    <navigationItem key="navigationItem" id="RUn-lc-Y2k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aM9-qt-8AE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826.0869565217395" y="-257.14285714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="woa-68-cdP">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBar" automaticallyAdjustsScrollViewInsets="NO" id="mKs-FL-jeC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W68-qi-2Rt">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pap-7i-YvV" kind="relationship" relationship="viewControllers" id="6fR-jJ-qs9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="clj-i9-232" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918.840579710145" y="-257.14285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coronavirus-cdc-1585869759" width="2000" height="1125"/>
+    </resources>
+</document>
