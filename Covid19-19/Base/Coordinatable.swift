@@ -3,7 +3,7 @@
 //  COVID-19
 //
 //  Created by macbook on 3/12/1399 AP.
-//  Copyright © 1399 Yahya. All rights reserved.
+//  Copyright © 1399 Yahya. All rights reserved
 //
 
 import Foundation
